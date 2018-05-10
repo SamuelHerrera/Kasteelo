@@ -1,0 +1,40 @@
+<div class="container">
+  <nav class="slidemenu">
+    <input type="radio" name="slideItem" id="slide-item-1" class="slide-toggle" [routerLink]="'quotation'" routerLinkActive #rla1="routerLinkActive"
+      [checked]="rla1.isActive" />
+    <label for="slide-item-1">
+      <img class="selector animated" [ngClass]="{'slideInUp': rla1.isActive,'slideOutDown': !rla1.isActive}" src="assets/img/selector.png">
+      <span>Quotation</span>
+    </label>
+    <input type="radio" name="slideItem" id="slide-item-2" class="slide-toggle" [routerLink]="'gallery'" routerLinkActive #rla2="routerLinkActive"
+      [checked]="rla2.isActive" />
+    <label for="slide-item-2">
+      <img class="selector animated" [ngClass]="{'slideInUp': rla2.isActive,'slideOutDown': !rla2.isActive}" src="assets/img/selector.png">
+      <span>Gallery</span>
+    </label>
+    <input type="radio" name="slideItem" id="slide-item-3" class="slide-toggle" [routerLink]="'main'" routerLinkActive #rla3="routerLinkActive"
+      [checked]="rla3.isActive" />
+    <label class="logo" for="slide-item-3">
+      <div class="img-container">
+        <img class="logo-img animated" [ngClass]="{'pulse': rla3.isActive}" src="assets/img/logo-name.png">
+      </div>
+    </label>
+    <input type="radio" name="slideItem" id="slide-item-4" class="slide-toggle" [routerLink]="'events'" routerLinkActive #rla4="routerLinkActive"
+      [checked]="rla4.isActive" />
+    <label for="slide-item-4">
+      <img class="selector animated" [ngClass]="{'slideInUp': rla4.isActive,'slideOutDown': !rla4.isActive}" src="assets/img/selector.png">
+      <span>Events</span>
+    </label>
+    <input type="radio" name="slideItem" id="slide-item-5" class="slide-toggle" [routerLink]="'contact'" routerLinkActive #rla5="routerLinkActive"
+      [checked]="rla5.isActive" />
+    <label for="slide-item-5">
+      <img class="selector animated" [ngClass]="{'slideInUp': rla5.isActive,'slideOutDown': !rla5.isActive}" src="assets/img/selector.png">
+      <span>Contact</span>
+    </label>
+    <div class="clear"></div>
+    <!-- <div class="slider">
+      <div class="bar"></div>
+    </div> -->
+  </nav>
+  <img class="img-footer" src="http://static.livedemo00.template-help.com/wordpress_51987/wp-content/themes/theme51987/images/line_top.png">
+</div>

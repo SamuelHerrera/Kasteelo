@@ -1,27 +1,155 @@
-.container{
-    border: 1px solid yellow;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
+.container {
+  width: 100%;
+  background-image: url(https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1665348/300/200/m1/fpnw/wm0/yellow-old-paper-texture-seamless-pattern-.jpg?1474118685&s=0bfa1cc4b5c44de63c5d5f4a73031376);
 }
 
-.a{
-    border: 1px solid brown;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.selector {
+  content: url("../../../../assets/img/selector2.png");
+  display: block;
+  position: absolute;
+  height: 71px;
+  width: 105px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  top: 25px;
 }
 
-.b{
-    border: 1px solid brown;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.img-footer {
+  position: absolute;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-top: -34px;
+  height: 45px;
+  width: 100%;
 }
 
+.logo-img {
+  height: 50px;
+  width: 150px;
+}
 
-.c{
-    border: 1px solid red;
-    margin: 10px;
+.img-container {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  -webkit-filter: drop-shadow(0px 0px 9px #222);
+  filter: drop-shadow(0px 0px 9px #222);
+}
+
+.active-link {
+  display: none;
+}
+
+.logo {
+  width: 30% !important;
+}
+
+.clear {
+  clear: both;
+}
+
+.slide-toggle {
+  display: none;
+}
+
+.slidemenu {
+  position: relative;
+  font-family: arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 6px;
+  z-index: 10;
+}
+
+.slidemenu label {
+  width: 17.5%;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #333;
+  opacity: 0.8;
+}
+
+.slidemenu label:hover {
+  cursor: pointer;
+}
+
+.slidemenu label span {
+  display: block;
+  padding: 5px;
+  margin-top: 10px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+  color: brown;
+}
+
+.slidemenu label .icon {
+  font-size: 20px;
+  border: solid 2px #333;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  display: block;
+  margin: 0 auto;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+/*Bar Style*/
+
+.slider {
+  width: 100%;
+  height: 5px;
+  display: block; // background: #ccc;
+  background-image: url(https://inhabitat.com/wp-content/blogs.dir/1/files/2018/02/wood-1580x549.jpg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.slider .bar {
+  width: 17.5%;
+  height: 5px;
+  background: #333;
+  background-image: url(https://thumbs.dreamstime.com/b/closeup-old-paper-texture-age-marks-29969606.jpg);
+  background-size: cover;
+  border-radius: 5px;
+}
+
+/*Animations*/
+
+.slidemenu label,
+.slider .bar {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+}
+
+/*Toggle*/
+
+.slidemenu .slide-toggle:checked+label {
+  // -webkit-filter: drop-shadow(0px 0px 9px #222);
+  // filter: drop-shadow(0px 0px 9px #222);
+}
+
+.slidemenu #slide-item-1:checked~.slider .bar {
+  margin-left: 0;
+}
+
+.slidemenu #slide-item-2:checked~.slider .bar {
+  margin-left: 17.5%;
+}
+
+.slidemenu #slide-item-3:checked~.slider .bar {
+  margin-left: 35%;
+  width: 30%;
+}
+
+.slidemenu #slide-item-4:checked~.slider .bar {
+  margin-left: 65%;
+}
+
+.slidemenu #slide-item-5:checked~.slider .bar {
+  margin-left: 82.5%;
 }
