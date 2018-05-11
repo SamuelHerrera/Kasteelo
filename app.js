@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(express.static(path.join(__dirname, '/dist/')));
+app.use(express.static(path.join(__dirname, '/dist/Kasteelo')));
 
 app.use((req, res, next) => {
   if (!req.secure && req.get('x-forwarded-proto') !== 'https' && process.env.NODE_ENV !== "development") {
@@ -27,7 +28,7 @@ app.use((req, res, next) => {
 // app.use('/api', api);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/dist/index.html'));
+  res.sendFile(path.join(__dirname, '/dist/Kasteelo/index.html'));
 });
 
 const port = process.env.PORT || 5000;
