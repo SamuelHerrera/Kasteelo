@@ -29,7 +29,8 @@
             "styles": [
               "src/styles.scss",
               "src/assets/css/gallery.prefixed.css",
-              "./node_modules/animate.css/animate.min.css"
+              "./node_modules/animate.css/animate.min.css",
+              "./node_modules/jquery/dist/jquery.min.js"
             ],
             "scripts": []
           },
